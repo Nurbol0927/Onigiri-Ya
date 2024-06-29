@@ -1,0 +1,99 @@
+.visa-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 90%; 
+    max-width: 300px;
+    background-image: radial-gradient(
+      circle 897px at 9% 80.3%,
+      rgba(55, 60, 245, 1) 0%,
+      rgba(234, 161, 15, 0.9) 100.2%
+    );
+    border-radius: 10px;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative; 
+    margin: auto; 
+    gap: 15px;
+  }
+  
+  .logoContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 18px;
+  }
+  
+  .svgLogo {
+    height: 40px;
+    width: auto;
+  }
+  
+  .inputstyle::placeholder {
+    color: #ffffff;
+  }
+  
+  .inputstyle {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    caret-color: red;
+    font-size: 13px;
+    height: 25px;
+    letter-spacing: 1.5px;
+    width: 100%; 
+  }
+  
+  .number-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #cardNumber {
+    width: 100%;
+    height: 25px;
+  }
+  
+  .name-date-cvv-container {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .name-wrapper,
+  .expiry-wrapper,
+  .cvv-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-label {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    color: #e2e2e2;
+    width: 100%;
+  }
+  
+  .confirm-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .confirm-button:hover {
+    background-color: #45a049;
+  }
+  

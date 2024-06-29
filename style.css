@@ -1,0 +1,229 @@
+/* Сброс стандартных отступов и полей */
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Caveat Brush", cursive;
+}
+
+/* Общие стили для body и шрифтов */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #6a9b0f;
+    font-family: "Caveat Brush", cursive;
+}
+
+/* Стили для header */
+header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-family: "Caveat Brush", cursive;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding: 0;
+    margin: 10px 0 0 0;
+    font-family: "Caveat Brush", cursive;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #45a049;
+}
+
+/* Основные стили для контента */
+main {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    justify-content: space-between; /* Равномерное распределение пространства между элементами */
+    flex-wrap: wrap; /* Разбивка на несколько строк при необходимости */
+}
+
+.food-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Адаптивная сетка: элементы не менее 200px шириной, равномерное распределение */
+    gap: 20px;
+}
+
+.food-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.food-item:hover {
+    transform: translateY(-5px);
+}
+
+.food-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.price {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+/* Стили для корзины */
+.cart {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item span {
+    flex-grow: 1;
+}
+
+.remove-item {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.remove-item:hover {
+    background-color: #e53935;
+}
+
+.total-price {
+    font-weight: bold;
+    text-align: right;
+}
+
+.checkout {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.checkout:hover {
+    background-color: #45a049;
+}
+
+/* Стили для подвала */
+footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+footer .social-media a:hover {
+    color: #45a049;
+}
+
+/* Медиазапросы для адаптивности */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .food-menu {
+        grid-template-columns: 1fr; /* Один столбец на мобильных устройствах */
+    }
+
+    .cart {
+        margin-top: 20px;
+    }
+}
+.food-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /* Добавлено для выравнивания по центру */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Добавлено для правильного распределения высоты элементов */
+}
